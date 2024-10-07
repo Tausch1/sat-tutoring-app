@@ -1,6 +1,3 @@
-import React from 'react';
-// Your other existing imports
-
 import QuestionDisplay from './QuestionDisplay';
 
 function App() {
@@ -16,11 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="text-3xl font-bold text-center my-4">The Beast</h1>
-      {/* Your other existing content */}
-      
       <QuestionDisplay question={sampleQuestion} answers={sampleAnswers} />
     </div>
   );
 }
-
-export default App;
