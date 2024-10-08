@@ -1,16 +1,18 @@
 import React from 'react';
 
-const QuestionDisplay = ({ question, answers }) => {
+const QuestionDisplay = ({ question, choices }) => {
   return (
-    <div className="text-center mt-8">
-      <div className="text-xl mb-4">
-        {question}
-      </div>
-      <div className="mt-4">
-        {answers.map((answer, index) => (
-          <div key={index} className="mb-2">{answer}</div>
-        ))}
-      </div>
+    <div>
+      <h2 className="text-xl font-bold mb-4">{question || 'No question available'}</h2>
+      {choices && choices.length > 0 ? (
+        <ul>
+          {choices.map((choice, index) => (
+            <li key={index} className="mb-2">{choice}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>No choices available</p>
+      )}
     </div>
   );
 };
