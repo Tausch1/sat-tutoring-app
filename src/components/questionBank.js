@@ -468,14 +468,671 @@ const questionBank = {
         ]
       }    ],
     'Trigonometry Essentials': [
-      // GREEN: INSERT 'Trigonometry Essentials' QUESTIONS HERE
-    ],
-    'Calculus Concepts': [
-      // GREEN: INSERT 'Calculus Concepts' QUESTIONS HERE
-    ],
-    'Statistics and Probability': [
-      // GREEN: INSERT 'Statistics and Probability' QUESTIONS HERE
-    ],
+  {
+    difficulty: "Easy",
+    questions: [
+      {
+        question: "What is cos(19π/4)?",
+        choices: ["-1/√2", "1/√2", "0", "-√2/2", "√2/2"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a right triangle ABC where C is the right angle, if sin(A) = 3/4, what is cos(B)?",
+        choices: ["1/4", "3/4", "4/5", "5/13", "12/13"],
+        correctAnswer: 1
+      },
+      {
+        question: "What is 45° in radians?",
+        choices: ["π/3", "π/4", "π/6", "π/2", "3π/4"],
+        correctAnswer: 1
+      },
+      {
+        question: "In the unit circle, what are the coordinates of the point where an angle of π/6 radians terminates?",
+        choices: ["(√3/2, 1/2)", "(1/2, √3/2)", "(√2/2, √2/2)", "(√3/3, 2/3)", "(1, 0)"],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the sine of 60°?",
+        choices: ["1/2", "√2/2", "√3/2", "3/4", "1"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a right triangle, if the adjacent side is 8 and the hypotenuse is 10, what is the cosine of the angle?",
+        choices: ["3/5", "4/5", "5/8", "6/10", "8/10"],
+        correctAnswer: 1
+      },
+      {
+        question: "What is tan(45°)?",
+        choices: ["0", "1/2", "1", "√2", "√3"],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the cosine of 0 radians?",
+        choices: ["0", "1/2", "1", "-1", "undefined"],
+        correctAnswer: 2
+      },
+      {
+        question: "In the unit circle, what is sin(π/2)?",
+        choices: ["0", "1/2", "√2/2", "√3/2", "1"],
+        correctAnswer: 4
+      },
+      {
+        question: "What is 180° in radians?",
+        choices: ["π/2", "π", "3π/2", "2π", "π/3"],
+        correctAnswer: 1
+      }
+    ]
+  },
+  {
+    difficulty: "Medium",
+    questions: [
+      {
+        question: "For angle A, if tan(A) = √3/3, what could be the measure of angle A in radians?",
+        choices: ["π/6", "π/4", "π/3", "π/2", "2π/3"],
+        correctAnswer: 2
+      },
+      {
+        question: "In right triangle DEF where E is the right angle, if sin(D) = 4/5 and DF = 15, what is the length of side DE?",
+        choices: ["9", "12", "13", "14", "16"],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the value of sin(75°) + cos(15°)?",
+        choices: ["1", "√2", "√3", "3/2", "2"],
+        correctAnswer: 3
+      },
+      {
+        question: "If cos(x) = 5/13, what is the value of sin(x)?",
+        choices: ["5/13", "12/13", "9/13", "4/5", "3/5"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a right triangle, if the opposite side is 7 and the hypotenuse is 25, what is the tangent of the angle?",
+        choices: ["7/24", "24/7", "7/25", "24/25", "25/24"],
+        correctAnswer: 0
+      },
+      {
+        question: "In a right triangle, if one leg is 8 and the hypotenuse is 17, what is the sine of the angle opposite to the given leg?",
+        choices: ["8/17", "15/17", "√225/17", "9/17", "16/17"],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the value of cos(120°)?",
+        choices: ["-1/2", "-√3/2", "1/2", "√3/2", "-1"],
+        correctAnswer: 0
+      },
+      {
+        question: "If sin(A) = 3/5 and cos(B) = 4/5, what is the value of sin(A) + cos(B)?",
+        choices: ["1", "7/5", "5/5", "6/5", "8/5"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a right triangle, if the adjacent side is 12 and the opposite side is 5, what is the tangent of the angle?",
+        choices: ["5/12", "12/5", "13/12", "12/13", "5/13"],
+        correctAnswer: 0
+      },
+      {
+        question: "In the unit circle, what is the y-coordinate of the point where an angle of 5π/6 radians terminates?",
+        choices: ["-1/2", "1/2", "-√3/2", "√3/2", "0"],
+        correctAnswer: 1
+      }
+    ]
+  },
+  {
+    difficulty: "Hard",
+    questions: [
+      {
+        question: "If sin(r) = cos(p) and r = 5m + 2 and p = 3m - 4, what is the value of p?",
+        choices: ["π/4", "π/3", "π/6", "π/2", "π/8"],
+        correctAnswer: 0
+      },
+      {
+        question: "On the unit circle, what could be the positive measure of an angle that begins at (1, 0) and terminates at (-1, y)?",
+        choices: ["9.5π", "10π", "11π", "12π", "12.5π"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a right triangle, if tan(A) = 3/4 and sin(B) = 12/13, what is the length of the hypotenuse?",
+        choices: ["5", "13", "25", "37", "65"],
+        correctAnswer: 1
+      },
+      {
+        question: "If sin(x) = a and cos(x) = b, where a² + b² = 1, what is the value of sin(2x)?",
+        choices: ["a + b", "a - b", "2ab", "2a²b", "2ab²"],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the solution to the equation sin(2x) = cos(x) in the interval [0, π]?",
+        choices: ["π/6", "π/4", "π/3", "5π/12", "π/2"],
+        correctAnswer: 3
+      },
+      {
+        question: "If tan(A) = 4/3 and tan(B) = 3/4, what is the value of tan(A+B)?",
+        choices: ["1", "7/5", "24/7", "25/7", "35/7"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a right triangle, if cos(A) = 5/13 and tan(B) = 12/5, what is the value of sin(A)?",
+        choices: ["5/13", "12/13", "3/5", "4/5", "1"],
+        correctAnswer: 1
+      },
+      {
+        question: "If sin(x) + cos(x) = 1, what is the value of sin²(x) + cos²(x)?",
+        choices: ["1/2", "3/4", "1", "5/4", "3/2"],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the value of cos(15°)cos(75°) + sin(15°)sin(75°)?",
+        choices: ["1/2", "√2/2", "√3/2", "3/4", "1"],
+        correctAnswer: 4
+      },
+      {
+        question: "In a right triangle, if the hypotenuse is 10 and one angle is 60°, what is the length of the side opposite to this angle?",
+        choices: ["5", "5√2", "5√3", "10√2/2", "10√3/2"],
+        correctAnswer: 2
+      }
+    ]
+  },
+  {
+    difficulty: "Diablo",
+    questions: [
+      {
+        question: "If sin(A) = (3x-1)/(3x+1) and cos(A) = 2√(x²+x)/(3x+1), what is the value of x?",
+        choices: ["1/3", "1/2", "2/3", "3/4", "5/6"],
+        correctAnswer: 1
+      },
+      {
+        question: "What is the sum of all solutions to the equation sin(x) = x in the interval [-π, π]?",
+        choices: ["0", "π/2", "π", "3π/2", "2π"],
+        correctAnswer: 0
+      },
+      {
+        question: "In a right triangle, if sin(A) = p and cos(B) = q, what is the value of tan(A) in terms of p and q?",
+        choices: ["p/q", "q/p", "p/√(1-q²)", "q/√(1-p²)", "√(1-q²)/q"],
+        correctAnswer: 2
+      },
+      {
+        question: "If sin(A) = 3/5 and cos(B) = 5/13, what is the value of sin(A+B)?",
+        choices: ["63/65", "64/65", "65/65", "66/65", "67/65"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a right triangle ABC with right angle at C, if tan(A) = 3/4 and BC = 10, what is the length of AB?",
+        choices: ["25/3", "50/3", "20", "25", "50"],
+        correctAnswer: 3
+      },
+      {
+        question: "If sin(x) = (a-b)/(a+b) and cos(x) = 2√(ab)/(a+b), what is the value of tan(x)?",
+        choices: ["(a-b)/2√(ab)", "(a-b)/√(ab)", "√(a/b) - √(b/a)", "(√a - √b)/(√a + √b)", "(a-b)/(a+b)"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a right triangle, if cos(A) = (√5 - 1)/4, what is the value of sin(A)?",
+        choices: ["(√5 + 1)/4", "(3 - √5)/4", "(√5 + 3)/4", "(5 - √5)/4", "(√5 - 1)/2"],
+        correctAnswer: 1
+      },
+      {
+        question: "If tan(A) + cot(A) = 5, what is the value of sin(2A)?",
+        choices: ["4/5", "3/5", "2/5", "1/5", "6/5"],
+        correctAnswer: 0
+      },
+      {
+        question: "In a right triangle, if one leg is a and the hypotenuse is 2a, what is the cosine of the angle opposite to the given leg?",
+        choices: ["1/2", "√3/2", "√2/2", "3/4", "5/6"],
+        correctAnswer: 2
+      },
+      {
+        question: "If sin(A) = x and cos(B) = y, where A and B are in the first quadrant, what is sin(A-B) in terms of x and y?",
+        choices: ["xy - √(1-x²)√(1-y²)", "x√(1-y²) - y√(1-x²)", "x√(1-y²) + y√(1-x²)", "xy + √(1-x²)√(1-y²)", "√(1-x²)y - x√(1-y²)"],
+        correctAnswer: 1
+      }
+    ]
+  }
+],
+    'Surface Area': [
+  {
+    difficulty: "Easy",
+    questions: [
+      {
+        question: "What is the surface area of a cube with side length 4 cm?",
+        choices: ["96 cm²", "80 cm²", "88 cm²", "92 cm²", "100 cm²"],
+        correctAnswer: 0
+      },
+      {
+        question: "Calculate the surface area of a rectangular prism with length 5 cm, width 3 cm, and height 2 cm.",
+        choices: ["46 cm²", "52 cm²", "58 cm²", "62 cm²", "68 cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "What is the surface area of a sphere with radius 3 m? (Use π = 3.14)",
+        choices: ["75.36 m²", "84.78 m²", "94.20 m²", "103.62 m²", "113.04 m²"],
+        correctAnswer: 4
+      },
+      {
+        question: "Find the surface area of a cylinder with radius 2 cm and height 5 cm. (Use π = 3.14)",
+        choices: ["75.36 cm²", "81.64 cm²", "87.92 cm²", "94.20 cm²", "100.48 cm²"],
+        correctAnswer: 1
+      },
+      {
+        question: "Calculate the surface area of a square pyramid with base side 4 m and slant height 3 m.",
+        choices: ["32 m²", "36 m²", "40 m²", "44 m²", "48 m²"],
+        correctAnswer: 3
+      },
+      {
+        question: "What is the surface area of a triangular prism with base side 3 cm, height 4 cm, and length 6 cm?",
+        choices: ["54 cm²", "60 cm²", "66 cm²", "72 cm²", "78 cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "Find the surface area of a rectangular prism with length 6 m, width 4 m, and height 2 m.",
+        choices: ["68 m²", "76 m²", "84 m²", "92 m²", "100 m²"],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the surface area of a cube with diagonal 6√3 cm?",
+        choices: ["108 cm²", "144 cm²", "180 cm²", "216 cm²", "252 cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "Calculate the surface area of a cylinder with diameter 8 cm and height 10 cm. (Use π = 3.14)",
+        choices: ["301.44 cm²", "326.56 cm²", "351.68 cm²", "376.80 cm²", "401.92 cm²"],
+        correctAnswer: 4
+      },
+      {
+        question: "Find the surface area of a sphere with diameter 6 in. (Use π = 3.14)",
+        choices: ["84.78 in²", "94.20 in²", "103.62 in²", "113.04 in²", "122.46 in²"],
+        correctAnswer: 3
+      }
+    ]
+  },
+  {
+    difficulty: "Medium",
+    questions: [
+      {
+        question: "A rectangular tank without a lid has a length of 6 m, width of 4 m, and height of 3 m. What is its surface area?",
+        choices: ["66 m²", "72 m²", "78 m²", "84 m²", "90 m²"],
+        correctAnswer: 3
+      },
+      {
+        question: "The surface area of a cube is 216 cm². What is the length of its edge?",
+        choices: ["4 cm", "5 cm", "6 cm", "7 cm", "8 cm"],
+        correctAnswer: 2
+      },
+      {
+        question: "A cylinder has a surface area of 628 cm² and a height of 10 cm. What is its radius? (Use π = 3.14)",
+        choices: ["4 cm", "5 cm", "6 cm", "7 cm", "8 cm"],
+        correctAnswer: 1
+      },
+      {
+        question: "The surface area of a sphere is 314 cm². What is its radius? (Use π = 3.14)",
+        choices: ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
+        correctAnswer: 4
+      },
+      {
+        question: "The surface area of a rectangular prism is 148 cm². If its length is 7 cm and its width is 5 cm, what is its height?",
+        choices: ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
+        correctAnswer: 1
+      },
+      {
+        question: "A square pyramid has a base edge of 8 m and a height of 6 m. What is its surface area?",
+        choices: ["144 m²", "160 m²", "176 m²", "192 m²", "208 m²"],
+        correctAnswer: 3
+      },
+      {
+        question: "The surface area of a cylinder is 314 cm². If its height is twice its radius, what is the radius? (Use π = 3.14)",
+        choices: ["2 cm", "3 cm", "4 cm", "5 cm", "6 cm"],
+        correctAnswer: 0
+      },
+      {
+        question: "A hemisphere has a surface area of 235.5 cm². What is its radius? (Use π = 3.14)",
+        choices: ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
+        correctAnswer: 2
+      },
+      {
+        question: "The total surface area of a closed cylindrical tank is 628 cm². If the height of the tank is 10 cm, what is its radius? (Use π = 3.14)",
+        choices: ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
+        correctAnswer: 4
+      },
+      {
+        question: "A rectangular prism has a surface area of 198 cm². If its length is 9 cm and its width is 5 cm, what is its height?",
+        choices: ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
+        correctAnswer: 1
+      }
+    ]
+  },
+  {
+    difficulty: "Hard",
+    questions: [
+      {
+        question: "A rectangular box has a surface area of 340 cm². The length of the box is twice its width, and the height is 2 cm less than the width. Find the dimensions of the box.",
+        choices: ["14 cm × 7 cm × 5 cm", "16 cm × 8 cm × 6 cm", "18 cm × 9 cm × 7 cm", "20 cm × 10 cm × 8 cm", "22 cm × 11 cm × 9 cm"],
+        correctAnswer: 2
+      },
+      {
+        question: "The surface area of a sphere is equal to the lateral surface area of a cylinder. If the radius of the sphere is 6 cm and the height of the cylinder is 8 cm, what is the radius of the cylinder?",
+        choices: ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
+        correctAnswer: 1
+      },
+      {
+        question: "The ratio of the total surface area of a cube to that of a sphere is 11:14. If the volume of the cube is 125 cm³, what is the radius of the sphere? (Use π = 3.14)",
+        choices: ["2.5 cm", "3.0 cm", "3.5 cm", "4.0 cm", "4.5 cm"],
+        correctAnswer: 4
+      },
+      {
+        question: "A rectangular prism has a surface area of 180 cm². The ratio of its length, width, and height is 3:2:1. Find its volume.",
+        choices: ["60 cm³", "80 cm³", "100 cm³", "120 cm³", "140 cm³"],
+        correctAnswer: 4
+      },
+      {
+        question: "The surface area of a cylinder is 314π cm². If the height of the cylinder is equal to its diameter, what is the volume of the cylinder?",
+        choices: ["392π cm³", "448π cm³", "504π cm³", "560π cm³", "616π cm³"],
+        correctAnswer: 0
+      },
+      {
+        question: "A square pyramid has a volume of 192 cm³ and a height of 8 cm. What is its surface area?",
+        choices: ["120 cm²", "144 cm²", "168 cm²", "192 cm²", "216 cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "A sphere is inscribed in a cube. If the surface area of the sphere is 314 cm², what is the surface area of the cube? (Use π = 3.14)",
+        choices: ["324 cm²", "356 cm²", "400 cm²", "441 cm²", "484 cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "The total surface area of a closed cylindrical tank is 628 cm². If the radius of the base is 5 cm, what is the height of the tank? (Use π = 3.14)",
+        choices: ["8 cm", "10 cm", "12 cm", "14 cm", "16 cm"],
+        correctAnswer: 0
+      },
+      {
+        question: "A rectangular prism has a surface area of 240 cm². If its length is twice its width and its height is 3 cm less than its width, what is its volume?",
+        choices: ["140 cm³", "180 cm³", "220 cm³", "260 cm³", "300 cm³"],
+        correctAnswer: 4
+      },
+      {
+        question: "The surface area of a sphere is 256π cm². What is its volume?",
+        choices: ["512π/3 cm³", "576π/3 cm³", "640π/3 cm³", "704π/3 cm³", "768π/3 cm³"],
+        correctAnswer: 4
+      }
+    ]
+  },
+  {
+    difficulty: "Diablo",
+    questions: [
+      {
+        question: "A rectangular box without a top has a surface area of 140 cm². The length of the box is twice its width, and the height is 1 cm more than the width. Find the volume of the box.",
+        choices: ["120 cm³", "135 cm³", "150 cm³", "165 cm³", "180 cm³"],
+        correctAnswer: 2
+      },
+      {
+        question: "The surface area of a sphere is increased by 44%. By what percentage is its radius increased? (Round to nearest whole percent)",
+        choices: ["16%", "20%", "24%", "28%", "32%"],
+        correctAnswer: 0
+      },
+      {
+        question: "A cylinder and a sphere have the same surface area. If the radius of the base of the cylinder is 4 cm and its height is 6 cm, what is the radius of the sphere? (Use π = 3.14, round to nearest 0.1 cm)",
+        choices: ["4.3 cm", "4.6 cm", "4.9 cm", "5.2 cm", "5.5 cm"],
+        correctAnswer: 4
+      },
+      {
+        question: "A cube is inscribed in a sphere, which is then inscribed in another cube. If the smaller cube has a surface area of 24 cm², what is the surface area of the larger cube? (Round to nearest 0.1 cm²)",
+        choices: ["42.2 cm²", "44.8 cm²", "47.4 cm²", "50.0 cm²", "52.6 cm²"],
+        correctAnswer: 2
+      },
+      {
+        question: "The surface area of a rectangular prism is 146 cm². Its length is 3 cm more than its width, and its height is 2 cm less than its width. If all dimensions are integers, find the volume of the prism.",
+        choices: ["60 cm³", "80 cm³", "100 cm³", "120 cm³", "140 cm³"],
+        correctAnswer: 4
+      },
+      {
+        question: "A cylinder and a hemisphere have the same radius and the same surface area. What is the ratio of the cylinder's height to its radius?",
+        choices: ["1:1", "2:1", "3:1", "4:1", "π:1"],
+        correctAnswer: 4
+      },
+      {
+        question: "A sphere is inscribed in a cube. If the difference between the surface areas of the cube and the sphere is 54 cm², what is the volume of the sphere? (Use π = 3.14, round to nearest cm³)",
+        choices: ["268 cm³", "348 cm³", "428 cm³", "508 cm³", "588 cm³"],
+        correctAnswer: 0
+      },
+      {
+        question: "The surface area of a regular tetrahedron is equal to that of a sphere. If the volume of the tetrahedron is 64√2 cm³, what is the volume of the sphere? (Use π = 3.14, round to nearest cm³)",
+        choices: ["268 cm³", "314 cm³", "360 cm³", "406 cm³", "452 cm³"],
+        correctAnswer: 3
+      },
+      {
+        question: "A cylindrical tank with hemispherical ends has a total surface area of 660π cm². If the radius of the tank is 10 cm, what is its total length? (Round to nearest 0.1 cm)",
+        choices: ["25.0 cm", "27.5 cm", "30.0 cm", "32.5 cm", "35.0 cm"],
+        correctAnswer: 4
+      },
+      {
+        question: "The ratio of the surface areas of two similar rectangular prisms is 4:9. If the volume of the smaller prism is 64 cm³, what is the volume of the larger prism?",
+        choices: ["144 cm³", "216 cm³", "288 cm³", "360 cm³", "432 cm³"],
+        correctAnswer: 3
+      }
+    ]
+  }
+],
+    'Balanced Geometry': [
+  {
+    difficulty: "Easy",
+    questions: [
+      {
+        question: "What is the area of a circle with radius 5 cm?",
+        choices: ["25π cm²", "50π cm²", "75π cm²", "100π cm²", "125π cm²"],
+        correctAnswer: 0
+      },
+      {
+        question: "In a 30-60-90 triangle, if the shortest side is 5 units, what is the length of the hypotenuse?",
+        choices: ["5√3 units", "10 units", "10√3 units", "15 units", "20 units"],
+        correctAnswer: 1
+      },
+      {
+        question: "What is the ratio of the radius of a circle to the side length of an inscribed equilateral triangle?",
+        choices: ["1:√3", "√3:3", "1:2", "2:3", "3:√3"],
+        correctAnswer: 1
+      },
+      {
+        question: "If the radius of a circle is 8 cm, what is the length of an arc that subtends a central angle of 60°?",
+        choices: ["4π/3 cm", "8π/3 cm", "4π cm", "8π cm", "16π/3 cm"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a 30-60-90 triangle, if the longest side is 12 units, what is the length of the shortest side?",
+        choices: ["3 units", "4 units", "6 units", "8 units", "9 units"],
+        correctAnswer: 1
+      },
+      {
+        question: "What is the measure of each angle in an equilateral triangle?",
+        choices: ["30°", "45°", "60°", "90°", "120°"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a circle with radius 10 cm, what is the length of a chord that is 12 cm away from the center?",
+        choices: ["8 cm", "12 cm", "16 cm", "20 cm", "24 cm"],
+        correctAnswer: 2
+      },
+      {
+        question: "What is the ratio of the longest to the shortest side in a 30-60-90 triangle?",
+        choices: ["1:√3", "1:2", "2:1", "√3:1", "2:√3"],
+        correctAnswer: 3
+      },
+      {
+        question: "If the perimeter of an equilateral triangle is 18 cm, what is the length of one side?",
+        choices: ["3 cm", "6 cm", "9 cm", "12 cm", "15 cm"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a circle, what is the measure of an inscribed angle that intercepts a semicircle?",
+        choices: ["30°", "45°", "60°", "90°", "180°"],
+        correctAnswer: 3
+      }
+    ]
+  },
+  {
+    difficulty: "Medium",
+    questions: [
+      {
+        question: "A circle is inscribed in a square. If the area of the square is 64 cm², what is the area of the circle?",
+        choices: ["16π cm²", "25π cm²", "36π cm²", "49π cm²", "64π cm²"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a 30-60-90 triangle, the area is 36√3 square units. What is the length of the hypotenuse?",
+        choices: ["6 units", "12 units", "18 units", "24 units", "36 units"],
+        correctAnswer: 2
+      },
+      {
+        question: "A regular hexagon is inscribed in a circle. If the radius of the circle is 10 cm, what is the side length of the hexagon?",
+        choices: ["5 cm", "10 cm", "5√3 cm", "10√3 cm", "15 cm"],
+        correctAnswer: 0
+      },
+      {
+        question: "The area of an equilateral triangle is 16√3 square units. What is the length of its side?",
+        choices: ["4 units", "8 units", "12 units", "16 units", "32 units"],
+        correctAnswer: 1
+      },
+      {
+        question: "In a circle with radius 12 cm, a central angle of 120° is formed. What is the area of the resulting sector?",
+        choices: ["16π cm²", "24π cm²", "36π cm²", "48π cm²", "72π cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "What is the ratio of the areas of two equilateral triangles if their side lengths are in the ratio 2:3?",
+        choices: ["2:3", "3:4", "4:9", "8:27", "1:√2"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a 30-60-90 triangle, if the middle-length side is 8√3 units, what is the length of the hypotenuse?",
+        choices: ["8 units", "12 units", "16 units", "24 units", "32 units"],
+        correctAnswer: 2
+      },
+      {
+        question: "A circle is inscribed in a square with side length 10 cm. What is the radius of the circle?",
+        choices: ["2.5 cm", "3 cm", "4 cm", "5 cm", "6 cm"],
+        correctAnswer: 3
+      },
+      {
+        question: "What is the ratio of the radii of the inscribed and circumscribed circles of an equilateral triangle?",
+        choices: ["1:2", "1:3", "1:√3", "√3:3", "2:3"],
+        correctAnswer: 3
+      },
+      {
+        question: "In a circle with diameter 20 cm, what is the length of a chord that is 8 cm away from the center?",
+        choices: ["8 cm", "12 cm", "16 cm", "24 cm", "32 cm"],
+        correctAnswer: 2
+      }
+    ]
+  },
+  {
+    difficulty: "Hard",
+    questions: [
+      {
+        question: "A circle is circumscribed in a square that touches the midpoints of the square. The diagonal of the square is 128. What is the area of the circle?",
+        choices: ["1024π", "2048π", "3072π", "4096π", "5120π"],
+        correctAnswer: 1
+      },
+      {
+        question: "The distance from H to the center of the circle is twice the radius. MH = 12. MH and RH are tangential to the circle. What is the distance from the center to H?",
+        choices: ["6√3", "8√3", "9√3", "12√3", "15√3"],
+        correctAnswer: 2
+      },
+      {
+        question: "An equilateral triangle is inscribed in a circle, and the circle is inscribed in a square. If the area of the triangle is 36√3 cm², what is the area of the square?",
+        choices: ["144 cm²", "192 cm²", "216 cm²", "256 cm²", "288 cm²"],
+        correctAnswer: 3
+      },
+      {
+        question: "In a 30-60-90 triangle, the difference between the hypotenuse and the shortest side is 6 units. What is the length of the middle side?",
+        choices: ["4√3 units", "6√3 units", "8√3 units", "9√3 units", "12√3 units"],
+        correctAnswer: 1
+      },
+      {
+        question: "A circle is inscribed in an equilateral triangle with side length 12 cm. What is the area of the circle?",
+        choices: ["4π cm²", "9π cm²", "16π cm²", "25π cm²", "36π cm²"],
+        correctAnswer: 2
+      },
+      {
+        question: "The area of a sector in a circle is numerically equal to the length of its arc. If the radius of the circle is 10 units, what is the measure of the central angle in radians?",
+        choices: ["1/5", "2/5", "3/5", "4/5", "1"],
+        correctAnswer: 0
+      },
+      {
+        question: "An equilateral triangle is inscribed in a circle, and another equilateral triangle is circumscribed about the same circle. What is the ratio of the area of the inscribed triangle to the area of the circumscribed triangle?",
+        choices: ["1:2", "1:3", "1:4", "3:4", "2:3"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a circle with radius r, a regular hexagon is inscribed. What is the ratio of the area of the hexagon to the area of the circle?",
+        choices: ["√3:2π", "3√3:2π", "2√3:π", "3:2π", "√3:π"],
+        correctAnswer: 1
+      },
+      {
+        question: "A 30-60-90 triangle is inscribed in a semicircle. If the radius of the circle is 8 units, what is the length of the longest side of the triangle?",
+        choices: ["8 units", "12 units", "16 units", "8√3 units", "16√3 units"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a circle, two chords intersect at right angles. If one chord has length 10 and the other has length 24, what is the radius of the circle?",
+        choices: ["13", "14", "15", "16", "17"],
+        correctAnswer: 1
+      }
+    ]
+  },
+  {
+    difficulty: "Diablo",
+    questions: [
+      {
+        question: "A 30-60-90 triangle is inscribed in a circle so that its hypotenuse is a diameter. If the area of the circle is 54π square units, what is the length of the shortest side of the triangle?",
+        choices: ["3 units", "3√3 units", "6 units", "6√3 units", "9 units"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a circle, a central angle of θ radians intercepts an arc of length 15 cm and creates a sector with area 60 cm². What is the value of θ?",
+        choices: ["4/5", "1", "5/4", "4/3", "3/2"],
+        correctAnswer: 2
+      },
+      {
+        question: "An equilateral triangle is inscribed in a circle, which is then inscribed in a square. If the perimeter of the triangle is 36 units, what is the area of the square?",
+        choices: ["48 units²", "64 units²", "80 units²", "96 units²", "112 units²"],
+        correctAnswer: 3
+      },
+      {
+        question: "A regular hexagon is inscribed in a circle, and an equilateral triangle is circumscribed about the same circle. What is the ratio of the area of the hexagon to the area of the triangle?",
+        choices: ["2:3", "3:4", "4:5", "5:6", "6:7"],
+        correctAnswer: 2
+      },
+      {
+        question: "In a 30-60-90 triangle, the sum of all sides is 144 units. What is the length of the shortest side?",
+        choices: ["24 units", "28 units", "32 units", "36 units", "40 units"],
+        correctAnswer: 1
+      },
+      {
+        question: "A circle is inscribed in a right triangle with legs 6 and 8. What is the radius of the circle?",
+        choices: ["1", "√2", "2", "3", "2√2"],
+        correctAnswer: 2
+      },
+      {
+        question: "Three circles of radius 3 cm are arranged so that each touches the other two externally. What is the area of the region enclosed by the three circles?",
+        choices: ["9(√3 - π) cm²", "18(√3 - π) cm²", "27(√3 - π) cm²", "36(√3 - π) cm²", "45(√3 - π) cm²"],
+        correctAnswer: 1
+      },
+      {
+        question: "In an equilateral triangle, the sum of the distances from any point inside the triangle to its sides is constant and equal to the altitude. If this sum is 12 units, what is the side length of the triangle?",
+        choices: ["8 units", "12 units", "16 units", "20 units", "24 units"],
+        correctAnswer: 2
+      },
+      {
+        question: "A circle is inscribed in a 30-60-90 triangle. If the radius of the circle is 2 units, what is the length of the hypotenuse of the triangle?",
+        choices: ["6(2+√3) units", "8(2+√3) units", "10(2+√3) units", "12(2+√3) units", "14(2+√3) units"],
+        correctAnswer: 1
+      },
+      {
+        question: "Three identical circles, each with radius r, are arranged so that their centers form an equilateral triangle. If the area of the region common to all three circles is equal to the area of the region outside all three circles but inside their triangle of centers, what is the side length of this triangle in terms of r?",
+        choices: ["2r√3", "3r√2", "4r", "3r√3", "6r"],
+        correctAnswer: 3
+      }
+    ]
+  }
+],
     'Number Theory': [
       // GREEN: INSERT 'Number Theory' QUESTIONS HERE
     ],
@@ -523,9 +1180,228 @@ const questionBank = {
     ]
   },
   English: {
-    'Grammar Fundamentals': [
-      // GREEN: INSERT 'Grammar Fundamentals' QUESTIONS HERE
-    ],
+    'Revised Subject-Verb Agreement Questions': [
+  {
+    difficulty: "Easy",
+    questions: [
+      {
+        question: "The new electric car model _______ to hit the market next spring. Consumers are eagerly anticipating its release.",
+        choices: ["is expected", "are expected", "will expect", "has expected", "expects"],
+        correctAnswer: 0
+      },
+      {
+        question: "The children in the park _______ happily on the swings. Their laughter fills the air with joy.",
+        choices: ["plays", "play", "are playing", "played", "have played"],
+        correctAnswer: 2
+      },
+      {
+        question: "The recipe for success _______ hard work and dedication. Many successful people attribute their achievements to these qualities.",
+        choices: ["include", "includes", "including", "included", "will include"],
+        correctAnswer: 1
+      },
+      {
+        question: "The flowers in the garden _______ beautifully this year. The gardener has been working hard to maintain them.",
+        choices: ["blooms", "bloom", "are blooming", "bloomed", "will bloom"],
+        correctAnswer: 2
+      },
+      {
+        question: "The movie _______ to be a blockbuster hit this summer. Critics have been raving about its stunning visual effects.",
+        choices: ["predicted", "predicts", "is predicting", "has predicted", "is predicted"],
+        correctAnswer: 4
+      },
+      {
+        question: "The cat _______ contentedly in the sunbeam. Its purring can be heard from across the room.",
+        choices: ["sleep", "sleeps", "sleeping", "slept", "has slept"],
+        correctAnswer: 1
+      },
+      {
+        question: "The news _______ shocking to everyone in the room. People are still discussing the implications of the announcement.",
+        choices: ["is", "are", "were", "have been", "will be"],
+        correctAnswer: 0
+      },
+      {
+        question: "The trees in the forest _______ tall and majestic. Their beauty attracts tourists from all over the world.",
+        choices: ["stands", "stand", "are standing", "stood", "have stood"],
+        correctAnswer: 1
+      },
+      {
+        question: "The book on the shelf _______ to be a first edition. Collectors are eager to get their hands on it.",
+        choices: ["appear", "appears", "appearing", "has appeared", "is appearing"],
+        correctAnswer: 1
+      },
+      {
+        question: "The students in the class _______ their homework on time. Their teacher is pleased with their dedication.",
+        choices: ["submits", "submit", "are submitting", "submitted", "have submitted"],
+        correctAnswer: 4
+      }
+    ]
+  },
+  {
+    difficulty: "Medium",
+    questions: [
+      {
+        question: "The group of scientists _______ a groundbreaking discovery last month. Their findings have been published in a prestigious journal.",
+        choices: ["make", "makes", "made", "has made", "have made"],
+        correctAnswer: 3
+      },
+      {
+        question: "Neither the dogs nor the cat _______ interested in the new toy. The pet owner is disappointed by their lack of enthusiasm.",
+        choices: ["seems", "seem", "seemed", "is seeming", "are seeming"],
+        correctAnswer: 2
+      },
+      {
+        question: "The committee, along with its chairperson, _______ to meet next week. They will discuss the upcoming budget proposals.",
+        choices: ["plan", "plans", "planning", "have planned", "are planning"],
+        correctAnswer: 1
+      },
+      {
+        question: "Every student and teacher _______ required to attend the assembly. The principal will address important school policies.",
+        choices: ["is", "are", "was", "were", "have been"],
+        correctAnswer: 0
+      },
+      {
+        question: "The flock of geese _______ south for the winter. Their annual migration is a spectacular sight.",
+        choices: ["fly", "flies", "flying", "flew", "have flown"],
+        correctAnswer: 1
+      },
+      {
+        question: "Each of the apartments in the building _______ a unique view of the city. The real estate agent is excited to show them to potential buyers.",
+        choices: ["offer", "offers", "offering", "offered", "has offered"],
+        correctAnswer: 1
+      },
+      {
+        question: "The jury _______ deliberating for hours on the controversial case. The public eagerly awaits their verdict.",
+        choices: ["is", "are", "was", "were", "have been"],
+        correctAnswer: 4
+      },
+      {
+        question: "A number of protesters _______ gathered outside the city hall. They are demanding action on climate change.",
+        choices: ["has", "have", "had", "having", "has been"],
+        correctAnswer: 1
+      },
+      {
+        question: "The quality of the products _______ significantly improved since last year. Customers have noticed and sales are increasing.",
+        choices: ["has", "have", "is", "are", "was"],
+        correctAnswer: 0
+      },
+      {
+        question: "Either the manager or the employees _______ to work overtime this weekend. The project deadline is approaching quickly.",
+        choices: ["needs", "need", "needing", "needed", "will need"],
+        correctAnswer: 1
+      }
+    ]
+  },
+  {
+    difficulty: "Hard",
+    questions: [
+      {
+        question: "The CEO, as well as her top executives, _______ to attend the shareholders' meeting next month. Investors are eager to hear about the company's future plans.",
+        choices: ["expects", "expect", "expected", "is expecting", "are expecting"],
+        correctAnswer: 3
+      },
+      {
+        question: "The rise in global temperatures, coupled with extreme weather events, _______ causing concern among climate scientists. They are urging immediate action to mitigate these effects.",
+        choices: ["is", "are", "has been", "have been", "will be"],
+        correctAnswer: 0
+      },
+      {
+        question: "None of the evidence presented at the trial _______ conclusive proof of the defendant's guilt. The jury is still deliberating on the verdict.",
+        choices: ["provide", "provides", "providing", "provided", "has provided"],
+        correctAnswer: 1
+      },
+      {
+        question: "The series of lectures on quantum mechanics _______ to be both challenging and enlightening. Students are looking forward to the next installment.",
+        choices: ["proves", "prove", "proving", "has proven", "have proven"],
+        correctAnswer: 3
+      },
+      {
+        question: "Not only the principal but also the teachers _______ concerned about the new curriculum. They will meet next week to discuss potential changes.",
+        choices: ["is", "are", "was", "were", "have been"],
+        correctAnswer: 1
+      },
+      {
+        question: "The data from the Mars rover _______ new insights into the planet's geology. Scientists are excitedly analyzing every piece of information.",
+        choices: ["is providing", "are providing", "provides", "provide", "has provided"],
+        correctAnswer: 4
+      },
+      {
+        question: "Every one of the paintings in the exhibition _______ a unique story about the artist's life. Art enthusiasts are flocking to the gallery to see them.",
+        choices: ["tell", "tells", "telling", "told", "has told"],
+        correctAnswer: 1
+      },
+      {
+        question: "The majority of the population _______ in favor of the new environmental regulations. Politicians are taking note of this shift in public opinion.",
+        choices: ["is", "are", "seems", "appear", "has been"],
+        correctAnswer: 0
+      },
+      {
+        question: "Neither the original manuscript nor the published versions _______ the controversial passage. Literary scholars are debating the reasons for its omission.",
+        choices: ["contains", "contain", "containing", "contained", "have contained"],
+        correctAnswer: 1
+      },
+      {
+        question: "The number of electric vehicles on the road _______ increasing rapidly each year. Automakers are investing heavily in this growing market.",
+        choices: ["is", "are", "has been", "have been", "will be"],
+        correctAnswer: 0
+      }
+    ]
+  },
+  {
+    difficulty: "Diablo",
+    questions: [
+      {
+        question: "The United States, along with several European countries, _______ to impose new sanctions on the rogue nation. Diplomatic tensions are rising as a result of this decision.",
+        choices: ["plans", "plan", "planning", "have planned", "is planning"],
+        correctAnswer: 4
+      },
+      {
+        question: "Either the software engineers or the project manager _______ to explain the delay in the product launch. The CEO is anxiously awaiting their report.",
+        choices: ["has", "have", "having", "will have", "is having"],
+        correctAnswer: 1
+      },
+      {
+        question: "The fleet of ships, including its flagship vessel, _______ scheduled to arrive at the port tomorrow. The harbor master is preparing for their arrival.",
+        choices: ["is", "are", "be", "being", "been"],
+        correctAnswer: 0
+      },
+      {
+        question: "A small percentage of the population _______ immune to the new virus strain. Researchers are studying these individuals to develop a more effective vaccine.",
+        choices: ["appear", "appears", "appearing", "has appeared", "have appeared"],
+        correctAnswer: 0
+      },
+      {
+        question: "More than one participant in the study _______ reported unusual side effects. The research team is investigating these cases thoroughly.",
+        choices: ["has", "have", "having", "had", "will have"],
+        correctAnswer: 1
+      },
+      {
+        question: "The jury, after hearing the compelling testimony from multiple witnesses, _______ still undecided on the verdict. The judge has asked them to continue deliberations.",
+        choices: ["remains", "remain", "remaining", "remained", "has remained"],
+        correctAnswer: 0
+      },
+      {
+        question: "The famous painting, along with several other valuable artworks, _______ been stolen from the museum last night. Police are conducting a citywide search for the thieves.",
+        choices: ["has", "have", "having", "had", "will have"],
+        correctAnswer: 0
+      },
+      {
+        question: "Neither the original hypothesis nor the alternative explanations _______ fully account for the observed phenomena. Scientists are developing new theories to address these discrepancies.",
+        choices: ["does", "do", "doing", "done", "has done"],
+        correctAnswer: 1
+      },
+      {
+        question: "The rock band, known for its eclectic mix of genres, _______ to release a new album next month. Fans are eagerly anticipating the first single.",
+        choices: ["prepare", "prepares", "preparing", "prepared", "is preparing"],
+        correctAnswer: 4
+      },
+      {
+        question: "Each of the students in the advanced program, despite facing numerous challenges, _______ expected to complete a comprehensive research project. The faculty is impressed by their dedication.",
+        choices: ["is", "are", "be", "being", "been"],
+        correctAnswer: 0
+      }
+    ]
+  }
+],
     'Vocabulary Building': [
       // GREEN: INSERT 'Vocabulary Building' QUESTIONS HERE
     ],

@@ -3,7 +3,7 @@ import React from 'react';
 const SprintModeSelection = ({ onSelectSprintMode }) => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold mb-8">sprint?</h1>
+      <h1 className="text-4xl font-bold mb-8">run?</h1>
       <div className="flex space-x-4">
         <button
           onClick={() => onSelectSprintMode(true)}

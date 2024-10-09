@@ -3,7 +3,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Space Mono', 'monospace'],
+        'space-mono': ['Space Mono', 'monospace'],
+      },
+    },
   },
   plugins: [],
 }
