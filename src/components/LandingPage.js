@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const LandingPage = ({ onSubjectSelect }) => {
   const [typedText, setTypedText] = useState('');
-  const fullText = "In what would you like to train?";
+  const fullText = "pick one";
 
   useEffect(() => {
     let i = 0;
@@ -23,16 +23,16 @@ const LandingPage = ({ onSubjectSelect }) => {
       <h1 className="text-4xl font-bold mb-8">{typedText}</h1>
       <div className="flex space-x-4">
         <button
-          onClick={() => onSubjectSelect('Math')}
+          onClick={() => onSubjectSelect('Ma')}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Math
+          Ma
         </button>
         <button
-          onClick={() => onSubjectSelect('English')}
+          onClick={() => onSubjectSelect('En')}
           className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
         >
-          English
+          En
         </button>
       </div>
     </div>

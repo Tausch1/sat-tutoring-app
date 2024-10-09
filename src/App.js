@@ -17,12 +17,61 @@ function App() {
   const [correctStreak, setCorrectStreak] = useState(0);
   const [incorrectStreak, setIncorrectStreak] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(60);
+  const [pointChange, setPointChange] = useState(null);
 
   const questions = useMemo(() => {
     if (!selectedSubject || !selectedConcept) return [];
-    const conceptQuestions = questionBank[selectedSubject][selectedConcept];
+    const conceptQuestions = questionBank[selectedSubject === 'Ma' ? 'Math' : 'English'][selectedConcept];
     return conceptQuestions?.find(q => q.difficulty === difficulty)?.questions || [];
   }, [selectedSubject, selectedConcept, difficulty]);
+
+  const selectRandomConcept = useCallback((subject) => {
+    const concepts = Object.keys(questionBank[subject === 'Ma' ? 'Math' : 'English']);
+    const randomConcept = concepts[Math.floor(Math.random() * concepts.length)];
+    setSelectedConcept(randomConcept);
+  }, []);
+
+  const handleSubjectSelect = useCallback((subject) => {
+    setSelectedSubject(subject);
+    selectRandomConcept(subject);
+  }, [selectRandomConcept]);
+
+  const handleSprintModeSelect = useCallback((isSprint) => {
+    setSprintModeSelected(true);
+    setTimerEnabled(isSprint);
+  }, []);
+
+  const handleLeave = useCallback(() => {
+    setSelectedSubject(null);
+    setSelectedConcept(null);
+    setSprintModeSelected(false);
+    setCurrentQuestionIndex(0);
+    setPoints(0);
+    setDifficulty('Easy');
+    setCorrectStreak(0);
+    setIncorrectStreak(0);
+    setTimeRemaining(60);
+  }, []);
+
+  const handleSwitch = useCallback(() => {
+    selectRandomConcept(selectedSubject);
+    setCurrentQuestionIndex(0);
+    setDifficulty('Easy');
+    setCorrectStreak(0);
+    setIncorrectStreak(0);
+    setTimeRemaining(60);
+  }, [selectedSubject, selectRandomConcept]);
+
+  const handleSubjectSwitch = useCallback(() => {
+    const newSubject = selectedSubject === 'Ma' ? 'En' : 'Ma';
+    setSelectedSubject(newSubject);
+    selectRandomConcept(newSubject);
+    setCurrentQuestionIndex(0);
+    setDifficulty('Easy');
+    setCorrectStreak(0);
+    setIncorrectStreak(0);
+    setTimeRemaining(60);
+  }, [selectedSubject, selectRandomConcept]);
 
   const updateDifficulty = useCallback(() => {
     if (correctStreak === 3 && difficulty !== 'Diablo') {
@@ -50,8 +99,9 @@ function App() {
 
   const handleAnswerSubmit = useCallback((answerIndex) => {
     const currentQuestion = questions[currentQuestionIndex];
+    let pointsToAdd = 0;
+    
     if (currentQuestion && answerIndex === currentQuestion.correctAnswer) {
-      let pointsToAdd;
       switch(difficulty) {
         case 'Easy': pointsToAdd = 1; break;
         case 'Medium': pointsToAdd = 2; break;
@@ -60,9 +110,19 @@ function App() {
         default: pointsToAdd = 1;
       }
       setPoints(prevPoints => prevPoints + pointsToAdd);
+      setPointChange(`+${pointsToAdd}`);
       setCorrectStreak(prevStreak => prevStreak + 1);
       setIncorrectStreak(0);
     } else {
+      switch(difficulty) {
+        case 'Easy': pointsToAdd = -1; break;
+        case 'Medium': pointsToAdd = -2; break;
+        case 'Hard': pointsToAdd = -3; break;
+        case 'Diablo': pointsToAdd = 0; break;
+        default: pointsToAdd = 0;
+      }
+      setPoints(prevPoints => Math.max(0, prevPoints + pointsToAdd));
+      setPointChange(difficulty !== 'Diablo' ? pointsToAdd.toString() : null);
       setIncorrectStreak(prevStreak => prevStreak + 1);
       setCorrectStreak(0);
     }
@@ -73,52 +133,10 @@ function App() {
     if (timerEnabled) {
       setTimeRemaining(60);
     }
+
+    // Reset point change display after 2 seconds
+    setTimeout(() => setPointChange(null), 2000);
   }, [questions, currentQuestionIndex, difficulty, updateDifficulty, timerEnabled]);
-
-  const selectRandomConcept = useCallback((subject) => {
-    const concepts = Object.keys(questionBank[subject]);
-    const randomConcept = concepts[Math.floor(Math.random() * concepts.length)];
-    setSelectedConcept(randomConcept);
-  }, []);
-
-  const handleSubjectSelect = useCallback((subject) => {
-    setSelectedSubject(subject);
-    selectRandomConcept(subject);
-  }, [selectRandomConcept]);
-
-  const handleSprintModeSelect = useCallback((isSprint) => {
-    setSprintModeSelected(true);
-    setTimerEnabled(isSprint);
-  }, []);
-
-  const handleLeave = useCallback(() => {
-    setSelectedSubject(null);
-    setSelectedConcept(null);
-    setSprintModeSelected(false);
-    setCurrentQuestionIndex(0);
-    setPoints(0);
-    setDifficulty('Easy');
-    setCorrectStreak(0);
-    setIncorrectStreak(0);
-  }, []);
-
-  const handleSwitch = useCallback(() => {
-    selectRandomConcept(selectedSubject);
-    setCurrentQuestionIndex(0);
-    setDifficulty('Easy');
-    setCorrectStreak(0);
-    setIncorrectStreak(0);
-  }, [selectedSubject, selectRandomConcept]);
-
-  const handleSubjectSwitch = useCallback(() => {
-    const newSubject = selectedSubject === 'Math' ? 'English' : 'Math';
-    setSelectedSubject(newSubject);
-    selectRandomConcept(newSubject);
-    setCurrentQuestionIndex(0);
-    setDifficulty('Easy');
-    setCorrectStreak(0);
-    setIncorrectStreak(0);
-  }, [selectedSubject, selectRandomConcept]);
 
   useEffect(() => {
     let timer;
@@ -151,7 +169,14 @@ function App() {
           onSubjectSwitch={handleSubjectSwitch}
         >
           <div className="mb-4">Current Difficulty: {difficulty}</div>
-          <div className="mb-4">Points: {points}</div>
+          <div className="mb-4">
+            Points: {points} 
+            {pointChange && (
+              <span className={`ml-2 ${pointChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
+                {pointChange}
+              </span>
+            )}
+          </div>
           {timerEnabled && <div className="mb-4">Time Remaining: {timeRemaining} seconds</div>}
           {questions[currentQuestionIndex] && (
             <>

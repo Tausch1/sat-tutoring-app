@@ -1,6 +1,8 @@
 import React from 'react';
 
 const ConceptPage = ({ subject, concept, onLeave, onSwitch, onSubjectSwitch, children }) => {
+  const oppositeSubject = subject === 'Ma' ? 'En' : 'Ma';
+
   return (
     <div className="p-4">
       <div className="flex justify-between items-center mb-4">
@@ -22,7 +24,7 @@ const ConceptPage = ({ subject, concept, onLeave, onSwitch, onSubjectSwitch, chi
             onClick={onSubjectSwitch}
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
           >
-            {subject === 'Math' ? 'En' : 'Ma'}
+            {oppositeSubject}
           </button>
         </div>
       </div>
