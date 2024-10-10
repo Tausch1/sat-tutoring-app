@@ -24,7 +24,7 @@ function App() {
   const [incorrectStreak, setIncorrectStreak] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(60);
   const [pointChange, setPointChange] = useState(null);
-  const [conceptOrder, setConceptOrder] = useState([]);
+  const [conceptOrder, setConceptOrder] = useState({});
   const [currentConceptIndex, setCurrentConceptIndex] = useState(0);
   const [questionIndices, setQuestionIndices] = useState({});
 
@@ -40,34 +40,17 @@ function App() {
     return conceptQuestions?.find(q => q.difficulty === difficulty)?.questions || [];
   }, [selectedSubject, selectedConcept, difficulty]);
 
-  // Helper function to shuffle array
-  const shuffleArray = (array) => {
+  const shuffleArray = useCallback((array) => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
     }
     return newArray;
-  };
+  }, []);
 
-  const selectInitialConcept = useCallback(() => {
-    if (conceptOrder.length > 0) {
-      setSelectedConcept(conceptOrder[0]);
-      setCurrentConceptIndex(0);
-    }
-  }, [conceptOrder]);
-
-  const selectNextConcept = useCallback(() => {
-    setCurrentConceptIndex((prevIndex) => (prevIndex + 1) % conceptOrder.length);
-    setSelectedConcept(conceptOrder[(currentConceptIndex + 1) % conceptOrder.length]);
-  }, [conceptOrder, currentConceptIndex]);
-
-  const handleSubjectSelect = useCallback((subject) => {
-    setSelectedSubject(subject);
+  const initializeQuestionIndices = useCallback((subject) => {
     const concepts = Object.keys(questionBank[subject === 'Ma' ? 'Math' : 'English']);
-    const shuffledConcepts = shuffleArray(concepts);
-    setConceptOrder(shuffledConcepts);
-    
     const newQuestionIndices = {};
     concepts.forEach(concept => {
       newQuestionIndices[concept] = {
@@ -77,14 +60,64 @@ function App() {
         Diablo: 0
       };
     });
-    setQuestionIndices(newQuestionIndices);
+    setQuestionIndices(prevIndices => ({
+      ...prevIndices,
+      [subject === 'Ma' ? 'Math' : 'English']: newQuestionIndices
+    }));
   }, []);
+
+  const conceptHasQuestions = useCallback((subject, concept) => {
+    const subjectQuestions = questionBank[subject === 'Ma' ? 'Math' : 'English'];
+    return subjectQuestions[concept] && subjectQuestions[concept].some(difficultySet => difficultySet.questions.length > 0);
+  }, []);
+
+  const selectValidConcept = useCallback((subject, conceptList) => {
+    for (let concept of conceptList) {
+      if (conceptHasQuestions(subject, concept)) {
+        return concept;
+      }
+    }
+    return null; // This should never happen if your question bank is properly populated
+  }, [conceptHasQuestions]);
+
+  const selectNextConcept = useCallback(() => {
+    const subjectKey = selectedSubject === 'Ma' ? 'Math' : 'English';
+    let nextIndex = (currentConceptIndex + 1) % conceptOrder[subjectKey].length;
+    let nextConcept = conceptOrder[subjectKey][nextIndex];
+    
+    while (!conceptHasQuestions(selectedSubject, nextConcept)) {
+      nextIndex = (nextIndex + 1) % conceptOrder[subjectKey].length;
+      nextConcept = conceptOrder[subjectKey][nextIndex];
+    }
+
+    setCurrentConceptIndex(nextIndex);
+    setSelectedConcept(nextConcept);
+  }, [conceptOrder, currentConceptIndex, selectedSubject, conceptHasQuestions]);
+
+  const handleSubjectSelect = useCallback((subject) => {
+    setSelectedSubject(subject);
+    const subjectKey = subject === 'Ma' ? 'Math' : 'English';
+    const concepts = Object.keys(questionBank[subjectKey]);
+    const shuffledConcepts = shuffleArray(concepts);
+    setConceptOrder(prevOrder => ({
+      ...prevOrder,
+      [subjectKey]: shuffledConcepts
+    }));
+    initializeQuestionIndices(subject);
+    
+    const validConcept = selectValidConcept(subject, shuffledConcepts);
+    if (validConcept) {
+      setSelectedConcept(validConcept);
+      setCurrentConceptIndex(shuffledConcepts.indexOf(validConcept));
+    } else {
+      console.error('No valid concepts found for subject:', subject);
+    }
+  }, [initializeQuestionIndices, selectValidConcept, shuffleArray]);
 
   const handleSprintModeSelect = useCallback((isSprint) => {
     setSprintModeSelected(true);
     setTimerEnabled(isSprint);
-    selectInitialConcept();
-  }, [selectInitialConcept]);
+  }, []);
 
   const handleLeave = useCallback(() => {
     setSelectedSubject(null);
@@ -96,7 +129,7 @@ function App() {
     setCorrectStreak(0);
     setIncorrectStreak(0);
     setTimeRemaining(60);
-    setConceptOrder([]);
+    setConceptOrder({});
     setCurrentConceptIndex(0);
     setQuestionIndices({});
   }, []);
@@ -192,9 +225,12 @@ function App() {
 
     setQuestionIndices(prevIndices => ({
       ...prevIndices,
-      [selectedConcept]: {
-        ...prevIndices[selectedConcept],
-        [difficulty]: prevIndices[selectedConcept][difficulty] + 1
+      [selectedSubject === 'Ma' ? 'Math' : 'English']: {
+        ...prevIndices[selectedSubject === 'Ma' ? 'Math' : 'English'],
+        [selectedConcept]: {
+          ...prevIndices[selectedSubject === 'Ma' ? 'Math' : 'English'][selectedConcept],
+          [difficulty]: (prevIndices[selectedSubject === 'Ma' ? 'Math' : 'English'][selectedConcept]?.[difficulty] || 0) + 1
+        }
       }
     }));
 
@@ -219,16 +255,16 @@ function App() {
   }, [timerEnabled, timeRemaining, sprintModeSelected, handleAnswerSubmit]);
 
   useEffect(() => {
-    if (selectedConcept) {
-      setCurrentQuestionIndex(questionIndices[selectedConcept][difficulty]);
+    if (selectedSubject) {
+      initializeQuestionIndices(selectedSubject);
     }
-  }, [difficulty, selectedConcept, questionIndices]);
+  }, [selectedSubject, initializeQuestionIndices]);
 
   useEffect(() => {
-    if (conceptOrder.length > 0 && !selectedConcept) {
-      selectInitialConcept();
+    if (selectedConcept && questionIndices[selectedSubject === 'Ma' ? 'Math' : 'English']) {
+      setCurrentQuestionIndex(questionIndices[selectedSubject === 'Ma' ? 'Math' : 'English'][selectedConcept]?.[difficulty] || 0);
     }
-  }, [conceptOrder, selectedConcept, selectInitialConcept]);
+  }, [difficulty, selectedConcept, questionIndices, selectedSubject]);
 
   return (
     <div className="App bg-black min-h-screen text-white flex flex-col">
@@ -239,7 +275,7 @@ function App() {
           <LandingPage onSubjectSelect={handleSubjectSelect} />
         ) : !sprintModeSelected ? (
           <SprintModeSelection onSelectSprintMode={handleSprintModeSelect} />
-        ) : (
+        ) : selectedConcept && questions.length > 0 ? (
           <ConceptPage
             subject={selectedSubject}
             concept={selectedConcept}
@@ -272,6 +308,8 @@ function App() {
               </>
             )}
           </ConceptPage>
+        ) : (
+          <div>Loading questions...</div>
         )}
       </div>
       {user && userProgress && (
