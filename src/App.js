@@ -1,12 +1,18 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import { useAuth } from './auth/Auth';
+import { createUserProgressModel, updateUserProgress } from './models/UserProgress';
 import LandingPage from './components/LandingPage';
 import SprintModeSelection from './components/SprintModeSelection';
 import ConceptPage from './components/ConceptPage';
 import QuestionDisplay from './components/QuestionDisplay';
 import AnswerInput from './components/AnswerInput';
+import UserProgressDashboard from './components/UserProgressDashboard';
+import LoginComponent from './components/LoginComponent';
 import questionBank from './components/questionBank';
 
 function App() {
+  const { user, login, logout } = useAuth();
+  const [userProgress, setUserProgress] = useState(null);
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedConcept, setSelectedConcept] = useState(null);
   const [sprintModeSelected, setSprintModeSelected] = useState(false);
@@ -18,6 +24,13 @@ function App() {
   const [incorrectStreak, setIncorrectStreak] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(60);
   const [pointChange, setPointChange] = useState(null);
+
+  useEffect(() => {
+    if (user && !userProgress) {
+      // In a real app, you'd fetch this from a backend
+      setUserProgress(createUserProgressModel(user.id));
+    }
+  }, [user, userProgress]);
 
   const questions = useMemo(() => {
     if (!selectedSubject || !selectedConcept) return [];
@@ -100,8 +113,10 @@ function App() {
   const handleAnswerSubmit = useCallback((answerIndex) => {
     const currentQuestion = questions[currentQuestionIndex];
     let pointsToAdd = 0;
+    let isCorrect = false;
     
     if (currentQuestion && answerIndex === currentQuestion.correctAnswer) {
+      isCorrect = true;
       switch(difficulty) {
         case 'Easy': pointsToAdd = 1; break;
         case 'Medium': pointsToAdd = 2; break;
@@ -127,6 +142,18 @@ function App() {
       setCorrectStreak(0);
     }
 
+    if (user && userProgress) {
+      const updatedProgress = updateUserProgress(
+        userProgress,
+        selectedSubject === 'Ma' ? 'Math' : 'English',
+        selectedConcept,
+        difficulty,
+        isCorrect
+      );
+      setUserProgress(updatedProgress);
+      // In a real app, you'd send this update to the backend
+    }
+
     updateDifficulty();
 
     setCurrentQuestionIndex(prevIndex => (prevIndex + 1) % questions.length);
@@ -134,9 +161,8 @@ function App() {
       setTimeRemaining(60);
     }
 
-    // Reset point change display after 2 seconds
     setTimeout(() => setPointChange(null), 2000);
-  }, [questions, currentQuestionIndex, difficulty, updateDifficulty, timerEnabled]);
+  }, [questions, currentQuestionIndex, difficulty, updateDifficulty, timerEnabled, user, userProgress, selectedSubject, selectedConcept]);
 
   useEffect(() => {
     let timer;
@@ -156,8 +182,13 @@ function App() {
 
   return (
     <div className="App bg-black min-h-screen text-white">
-      {!selectedSubject ? (
-        <LandingPage onSubjectSelect={handleSubjectSelect} />
+      {!user ? (
+        <LoginComponent onLogin={login} />
+      ) : !selectedSubject ? (
+        <>
+          <UserProgressDashboard userProgress={userProgress} />
+          <LandingPage onSubjectSelect={handleSubjectSelect} />
+        </>
       ) : !sprintModeSelected ? (
         <SprintModeSelection onSelectSprintMode={handleSprintModeSelect} />
       ) : (
@@ -168,6 +199,7 @@ function App() {
           onSwitch={handleSwitch}
           onSubjectSwitch={handleSubjectSwitch}
         >
+          <div className="mb-4">User: {user.username}</div>
           <div className="mb-4">Current Difficulty: {difficulty}</div>
           <div className="mb-4">
             Points: {points} 

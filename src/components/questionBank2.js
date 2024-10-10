@@ -375,8 +375,7 @@ const questionBank = {
             question: "If a landscape company sells 15 cubic yards of soil for $1,500, what is the price per cubic foot? (1 yard = 3 feet)",
             choices: ["$2.50", "$3.33", "$5.00", "$6.00", "$6.67"],
             correctAnswer: 1
-          },
-          {
+          },{
             question: "A river is flowing at 12 miles per hour. How many kilometers will it flow in 6 hours? (1 mile = 1.609 kilometers)",
             choices: ["72.0 km", "96.5 km", "103.7 km", "115.2 km", "150.5 km"],
             correctAnswer: 3
@@ -480,228 +479,334 @@ const questionBank = {
       }
     ]
   },
+    
+    'Number Theory': [
+      // GREEN: INSERT 'Number Theory' QUESTIONS HERE
+    ],
+    'Linear Algebra': [
+      // GREEN: INSERT 'Linear Algebra' QUESTIONS HERE
+    ],
+    'Discrete Mathematics': [
+      // GREEN: INSERT 'Discrete Mathematics' QUESTIONS HERE
+    ],
+    'Complex Numbers': [
+      // GREEN: INSERT 'Complex Numbers' QUESTIONS HERE
+    ],
+    'Differential Equations': [
+      // GREEN: INSERT 'Differential Equations' QUESTIONS HERE
+    ],
+    'Combinatorics': [
+      // GREEN: INSERT 'Combinatorics' QUESTIONS HERE
+    ],
+    'Graph Theory': [
+      // GREEN: INSERT 'Graph Theory' QUESTIONS HERE
+    ],
+    'Mathematical Logic': [
+      // GREEN: INSERT 'Mathematical Logic' QUESTIONS HERE
+    ],
+    'Numerical Analysis': [
+      // GREEN: INSERT 'Numerical Analysis' QUESTIONS HERE
+    ],
+    'Optimization Theory': [
+      // GREEN: INSERT 'Optimization Theory' QUESTIONS HERE
+    ],
+    'Set Theory': [
+      // GREEN: INSERT 'Set Theory' QUESTIONS HERE
+    ],
+    'Topology': [
+      // GREEN: INSERT 'Topology' QUESTIONS HERE
+    ],
+    'Financial Mathematics': [
+      // GREEN: INSERT 'Financial Mathematics' QUESTIONS HERE
+    ],
+    'Vector Calculus': [
+      // GREEN: INSERT 'Vector Calculus' QUESTIONS HERE
+    ],
+    'Mathematical Modeling': [
+      // GREEN: INSERT 'Mathematical Modeling' QUESTIONS HERE
+    ]
+    }
+  ]
+  },
   English: {
     'Revised Subject-Verb Agreement Questions': [
+  {
+    difficulty: "Easy",
+    questions: [
       {
-        difficulty: "Easy",
-        questions: [
-          {
-            question: "The bouquet of flowers _______ placed on the table for decoration.",
-            choices: ["were", "was", "are", "have been"],
-            correctAnswer: 1
-          },
-          {
-            question: "The results of the experiment _______ promising, according to the scientists.",
-            choices: ["was", "is", "were", "has been"],
-            correctAnswer: 2
-          },
-          {
-            question: "Each of the students _______ a new notebook on the first day of school.",
-            choices: ["receive", "receives", "are receiving", "have received"],
-            correctAnswer: 1
-          },
-          {
-            question: "The team of doctors _______ prepared for the complex surgery.",
-            choices: ["was", "were", "is", "are"],
-            correctAnswer: 0
-          },
-          {
-            question: "The collection of rare stamps _______ displayed in the museum last week.",
-            choices: ["was", "were", "are", "have been"],
-            correctAnswer: 0
-          },
-          {
-            question: "None of the participants _______ ready to leave the room after the lecture ended.",
-            choices: ["was", "were", "is", "has"],
-            correctAnswer: 0
-          },
-          {
-            question: "Neither the cat nor the dog _______ interested in the new toys.",
-            choices: ["is", "are", "were", "has been"],
-            correctAnswer: 0
-          },
-          {
-            question: "The amount of sugar in the recipe _______ to be adjusted to avoid it being too sweet.",
-            choices: ["has", "have", "was", "were"],
-            correctAnswer: 0
-          },
-          {
-            question: "The committee _______ scheduled to meet tomorrow to finalize the plans.",
-            choices: ["is", "are", "were", "have"],
-            correctAnswer: 0
-          },
-          {
-            question: "The number of cars in the parking lot _______ decreased after the event ended.",
-            choices: ["has", "have", "is", "are"],
-            correctAnswer: 0
-          }
-        ]
+        question: "The new electric car model _______ to hit the market next spring. Consumers are eagerly anticipating its release.",
+        choices: ["is expected", "are expected", "will expect", "has expected", "expects"],
+        correctAnswer: 0
       },
       {
-        difficulty: "Medium",
-        questions: [
-          {
-            question: "Neither the books nor the movie _______ able to capture the true essence of the story.",
-            choices: ["are", "is", "were", "was"],
-            correctAnswer: 1
-          },
-          {
-            question: "The number of applicants for the position _______ increased significantly this year.",
-            choices: ["have", "has", "is", "are"],
-            correctAnswer: 1
-          },
-          {
-            question: "The team of researchers _______ ready to present their findings at the conference next month.",
-            choices: ["are", "is", "have been", "were"],
-            correctAnswer: 0
-          },
-          {
-            question: "The box of old letters and photographs _______ found in the attic.",
-            choices: ["was", "were", "are", "have been"],
-            correctAnswer: 0
-          },
-          {
-            question: "Neither the professor nor the students _______ prepared for the surprise quiz.",
-            choices: ["was", "were", "are", "have"],
-            correctAnswer: 1
-          },
-          {
-            question: "The data from the recent survey _______ essential for the project.",
-            choices: ["was", "were", "has been", "have been"],
-            correctAnswer: 1
-          },
-          {
-            question: "Each of the apartments _______ a stunning view of the city skyline.",
-            choices: ["offer", "offers", "offering", "offered"],
-            correctAnswer: 1
-          },
-          {
-            question: "The series of lectures on artificial intelligence _______ students with cutting-edge knowledge.",
-            choices: ["provide", "provides", "have provided", "are providing"],
-            correctAnswer: 1
-          },
-          {
-            question: "The rules of the game _______ difficult to understand for beginners.",
-            choices: ["is", "are", "was", "has been"],
-            correctAnswer: 1
-          },
-          {
-            question: "The variety of flavors at the ice cream shop _______ customers a lot of options.",
-            choices: ["give", "gives", "has given", "were giving"],
-            correctAnswer: 1
-          }
-        ]
+        question: "The children in the park _______ happily on the swings. Their laughter fills the air with joy.",
+        choices: ["plays", "play", "are playing", "played", "have played"],
+        correctAnswer: 2
       },
       {
-        difficulty: "Hard",
-        questions: [
-          {
-            question: "The discovery of several ancient manuscripts, which were hidden for centuries, _______ historians’ understanding of the region’s culture. These documents _______ new light on previously obscure practices.",
-            choices: ["has expanded / sheds", "have expanded / shed", "has expanded / shed", "have expanded / sheds"],
-            correctAnswer: 1
-          },
-          {
-            question: "At the center of the controversy _______ two conflicting studies, both of which claim to prove opposite conclusions about climate change. The results of the studies _______ widely debated among scientists.",
-            choices: ["is / is", "are / are", "is / are", "are / is"],
-            correctAnswer: 2
-          },
-          {
-            question: "The array of renewable energy options _______ a promising future for reducing carbon emissions. Solar power and wind energy _______ at the forefront of this movement.",
-            choices: ["presents / are", "present / are", "presents / is", "present / is"],
-            correctAnswer: 0
-          },
-          {
-            question: "Embedded in the economic analysis _______ a deeper critique of the global financial system, which many economists argue is flawed. This critique _______ significant reforms.",
-            choices: ["is / has prompted", "are / have prompted", "is / have prompted", "are / has prompted"],
-            correctAnswer: 0
-          },
-          {
-            question: "The rise of social media platforms _______ an unprecedented level of connectivity. These platforms _______ new challenges for privacy and security.",
-            choices: ["has created / create", "have created / create", "has created / creates", "have created / creates"],
-            correctAnswer: 3
-          },
-          {
-            question: "Included in the report _______ several recommendations for improving cybersecurity. These recommendations _______ be reviewed by the committee.",
-            choices: ["is / is", "are / is", "is / are", "are / are"],
-            correctAnswer: 3
-          },
-          {
-            question: "At the center of the debate _______ the question of whether artificial intelligence will replace human jobs. This question _______ both economic and ethical considerations.",
-            choices: ["is / involves", "are / involve", "is / involve", "are / involves"],
-            correctAnswer: 0
-          },
-          {
-            question: "In the final analysis _______ several key points that _______ critical for understanding the argument presented.",
-            choices: ["is / are", "are / are", "is / is", "are / is"],
-            correctAnswer: 2
-          },
-          {
-            question: "The development of virtual reality, along with other digital innovations, _______ industries to evolve rapidly. These developments _______ changing consumer behavior.",
-            choices: ["has allowed / are", "have allowed / are", "has allowed / is", "have allowed / is"],
-            correctAnswer: 0
-          },
-          {
-            question: "Behind the success of the new technology _______ a dedicated team of engineers who _______ tirelessly to improve its functionality.",
-            choices: ["is / works", "are / work", "is / work", "are / works"],
-            correctAnswer: 2
-          }
-        ]
+        question: "The recipe for success _______ hard work and dedication. Many successful people attribute their achievements to these qualities.",
+        choices: ["include", "includes", "including", "included", "will include"],
+        correctAnswer: 1
       },
       {
-        difficulty: "Diablo",
-        questions: [
-          {
-            question: "Neither the complex algorithms designed to optimize space travel nor the engineers who implement them _______ fully grasp the long-term implications of their work. These advancements _______ led to unexpected discoveries in other fields of science.",
-            choices: ["has / have", "have / have", "has / has", "have / has"],
-            correctAnswer: 1
-          },
-          {
-            question: "At the heart of the issue _______ the regulations governing pharmaceutical companies, many of which _______ outdated and inadequate for modern science. The need for reform _______ becoming a major point of debate in the medical field.",
-            choices: ["is / are / is", "are / are / are", "is / is / is", "are / is / is"],
-            correctAnswer: 0
-          },
-          {
-            question: "Buried deep within the company’s quarterly report _______ an overlooked statement detailing the security breach. This breach _______ many to question the company’s future viability.",
-            choices: ["is / leads", "are / lead", "is / lead", "are / leads"],
-            correctAnswer: 0
-          },
-          {
-            question: "On the agenda for the meeting _______ several pressing issues, including the budget deficit and the upcoming election. These issues _______ further discussions among stakeholders.",
-            choices: ["is / will lead", "are / will lead", "is / leads", "are / leads"],
-            correctAnswer: 1
-          },
-          {
-            question: "At the center of the debate _______ the ethics of genetic engineering, which _______ significant opposition from various groups. The controversy _______ scientists to reexamine the broader implications of their work.",
-            choices: ["are / faces / forces", "is / face / forces", "is / faces / forces", "are / face / force"],
-            correctAnswer: 2
-          },
-          {
-            question: "At stake in the decision _______ millions of dollars in funding for the research, which _______ crucial to the success of the project. Failure to secure the funding _______ dire consequences.",
-            choices: ["is / are / will have", "are / is / will have", "is / is / will have", "are / are / has"],
-            correctAnswer: 0
-          },
-          {
-            question: "Included in the findings _______ several data points that _______ the original hypothesis. These points _______ fundamental to the conclusions drawn by the research team.",
-            choices: ["is / contradict / are", "are / contradict / are", "is / contradicts / is", "are / contradicts / are"],
-            correctAnswer: 1
-          },
-          {
-            question: "A series of technological innovations _______ the energy sector, but the resulting economic shifts _______ significant challenges for policy makers.",
-            choices: ["has transformed / present", "have transformed / presents", "have transformed / present", "has transformed / presents"],
-            correctAnswer: 2
-          },
-          {
-            question: "Behind the rapid growth of the company _______ a team of dedicated engineers, whose work _______ the backbone of its success. This achievement _______ further recognition in the industry.",
-            choices: ["is / forms / has earned", "are / forms / have earned", "is / form / has earned", "are / form / has earned"],
-            correctAnswer: 0
-          },
-          {
-            question: "Neither the changes in policy nor the new guidelines _______ the intended effect. The company _______ to reevaluate its approach.",
-            choices: ["has had / is forced", "have had / is forced", "has had / are forced", "have had / are forcing"],
-            correctAnswer: 1
-          }
-        ]
+        question: "The flowers in the garden _______ beautifully this year. The gardener has been working hard to maintain them.",
+        choices: ["blooms", "bloom", "are blooming", "bloomed", "will bloom"],
+        correctAnswer: 2
+      },
+      {
+        question: "The movie _______ to be a blockbuster hit this summer. Critics have been raving about its stunning visual effects.",
+        choices: ["predicted", "predicts", "is predicting", "has predicted", "is predicted"],
+        correctAnswer: 4
+      },
+      {
+        question: "The cat _______ contentedly in the sunbeam. Its purring can be heard from across the room.",
+        choices: ["sleep", "sleeps", "sleeping", "slept", "has slept"],
+        correctAnswer: 1
+      },
+      {
+        question: "The news _______ shocking to everyone in the room. People are still discussing the implications of the announcement.",
+        choices: ["is", "are", "were", "have been", "will be"],
+        correctAnswer: 0
+      },
+      {
+        question: "The trees in the forest _______ tall and majestic. Their beauty attracts tourists from all over the world.",
+        choices: ["stands", "stand", "are standing", "stood", "have stood"],
+        correctAnswer: 1
+      },
+      {
+        question: "The book on the shelf _______ to be a first edition. Collectors are eager to get their hands on it.",
+        choices: ["appear", "appears", "appearing", "has appeared", "is appearing"],
+        correctAnswer: 1
+      },
+      {
+        question: "The students in the class _______ their homework on time. Their teacher is pleased with their dedication.",
+        choices: ["submits", "submit", "are submitting", "submitted", "have submitted"],
+        correctAnswer: 4
       }
+    ]
+  },
+  {
+    difficulty: "Medium",
+    questions: [
+      {
+        question: "The group of scientists _______ a groundbreaking discovery last month. Their findings have been published in a prestigious journal.",
+        choices: ["make", "makes", "made", "has made", "have made"],
+        correctAnswer: 3
+      },
+      {
+        question: "Neither the dogs nor the cat _______ interested in the new toy. The pet owner is disappointed by their lack of enthusiasm.",
+        choices: ["seems", "seem", "seemed", "is seeming", "are seeming"],
+        correctAnswer: 2
+      },
+      {
+        question: "The committee, along with its chairperson, _______ to meet next week. They will discuss the upcoming budget proposals.",
+        choices: ["plan", "plans", "planning", "have planned", "are planning"],
+        correctAnswer: 1
+      },
+      {
+        question: "Every student and teacher _______ required to attend the assembly. The principal will address important school policies.",
+        choices: ["is", "are", "was", "were", "have been"],
+        correctAnswer: 0
+      },
+      {
+        question: "The flock of geese _______ south for the winter. Their annual migration is a spectacular sight.",
+        choices: ["fly", "flies", "flying", "flew", "have flown"],
+        correctAnswer: 1
+      },
+      {
+        question: "Each of the apartments in the building _______ a unique view of the city. The real estate agent is excited to show them to potential buyers.",
+        choices: ["offer", "offers", "offering", "offered", "has offered"],
+        correctAnswer: 1
+      },
+      {
+        question: "The jury _______ deliberating for hours on the controversial case. The public eagerly awaits their verdict.",
+        choices: ["is", "are", "was", "were", "have been"],
+        correctAnswer: 4
+      },
+      {
+        question: "A number of protesters _______ gathered outside the city hall. They are demanding action on climate change.",
+        choices: ["has", "have", "had", "having", "has been"],
+        correctAnswer: 1
+      },
+      {
+        question: "The quality of the products _______ significantly improved since last year. Customers have noticed and sales are increasing.",
+        choices: ["has", "have", "is", "are", "was"],
+        correctAnswer: 0
+      },
+      {
+        question: "Either the manager or the employees _______ to work overtime this weekend. The project deadline is approaching quickly.",
+        choices: ["needs", "need", "needing", "needed", "will need"],
+        correctAnswer: 1
+      }
+    ]
+  },
+  {
+    difficulty: "Hard",
+    questions: [
+      {
+        question: "The CEO, as well as her top executives, _______ to attend the shareholders' meeting next month. Investors are eager to hear about the company's future plans.",
+        choices: ["expects", "expect", "expected", "is expecting", "are expecting"],
+        correctAnswer: 3
+      },
+      {
+        question: "The rise in global temperatures, coupled with extreme weather events, _______ causing concern among climate scientists. They are urging immediate action to mitigate these effects.",
+        choices: ["is", "are", "has been", "have been", "will be"],
+        correctAnswer: 0
+      },
+      {
+        question: "None of the evidence presented at the trial _______ conclusive proof of the defendant's guilt. The jury is still deliberating on the verdict.",
+        choices: ["provide", "provides", "providing", "provided", "has provided"],
+        correctAnswer: 1
+      },
+      {
+        question: "The series of lectures on quantum mechanics _______ to be both challenging and enlightening. Students are looking forward to the next installment.",
+        choices: ["proves", "prove", "proving", "has proven", "have proven"],
+        correctAnswer: 3
+      },
+      {
+        question: "Not only the principal but also the teachers _______ concerned about the new curriculum. They will meet next week to discuss potential changes.",
+        choices: ["is", "are", "was", "were", "have been"],
+        correctAnswer: 1
+      },
+      {
+        question: "The data from the Mars rover _______ new insights into the planet's geology. Scientists are excitedly analyzing every piece of information.",
+        choices: ["is providing", "are providing", "provides", "provide", "has provided"],
+        correctAnswer: 4
+      },
+      {
+        question: "Every one of the paintings in the exhibition _______ a unique story about the artist's life. Art enthusiasts are flocking to the gallery to see them.",
+        choices: ["tell", "tells", "telling", "told", "has told"],
+        correctAnswer: 1
+      },
+      {
+        question: "The majority of the population _______ in favor of the new environmental regulations. Politicians are taking note of this shift in public opinion.",
+        choices: ["is", "are", "seems", "appear", "has been"],
+        correctAnswer: 0
+      },
+      {
+        question: "Neither the original manuscript nor the published versions _______ the controversial passage. Literary scholars are debating the reasons for its omission.",
+        choices: ["contains", "contain", "containing", "contained", "have contained"],
+        correctAnswer: 1
+      },
+      {
+        question: "The number of electric vehicles on the road _______ increasing rapidly each year. Automakers are investing heavily in this growing market.",
+        choices: ["is", "are", "has been", "have been", "will be"],
+        correctAnswer: 0
+      }
+    ]
+  },
+  {
+    difficulty: "Diablo",
+    questions: [
+      {
+        question: "The United States, along with several European countries, _______ to impose new sanctions on the rogue nation. Diplomatic tensions are rising as a result of this decision.",
+        choices: ["plans", "plan", "planning", "have planned", "is planning"],
+        correctAnswer: 4
+      },
+      {
+        question: "Either the software engineers or the project manager _______ to explain the delay in the product launch. The CEO is anxiously awaiting their report.",
+        choices: ["has", "have", "having", "will have", "is having"],
+        correctAnswer: 1
+      },
+      {
+        question: "The fleet of ships, including its flagship vessel, _______ scheduled to arrive at the port tomorrow. The harbor master is preparing for their arrival.",
+        choices: ["is", "are", "be", "being", "been"],
+        correctAnswer: 0
+      },
+      {
+        question: "A small percentage of the population _______ immune to the new virus strain. Researchers are studying these individuals to develop a more effective vaccine.",
+        choices: ["appear", "appears", "appearing", "has appeared", "have appeared"],
+        correctAnswer: 0
+      },
+      {
+        question: "More than one participant in the study _______ reported unusual side effects. The research team is investigating these cases thoroughly.",
+        choices: ["has", "have", "having", "had", "will have"],
+        correctAnswer: 1
+      },
+      {
+        question: "The jury, after hearing the compelling testimony from multiple witnesses, _______ still undecided on the verdict. The judge has asked them to continue deliberations.",
+        choices: ["remains", "remain", "remaining", "remained", "has remained"],
+        correctAnswer: 0
+      },
+      {
+        question: "The famous painting, along with several other valuable artworks, _______ been stolen from the museum last night. Police are conducting a citywide search for the thieves.",
+        choices: ["has", "have", "having", "had", "will have"],
+        correctAnswer: 0
+      },
+      {
+        question: "Neither the original hypothesis nor the alternative explanations _______ fully account for the observed phenomena. Scientists are developing new theories to address these discrepancies.",
+        choices: ["does", "do", "doing", "done", "has done"],
+        correctAnswer: 1
+      },
+      {
+        question: "The rock band, known for its eclectic mix of genres, _______ to release a new album next month. Fans are eagerly anticipating the first single.",
+        choices: ["prepare", "prepares", "preparing", "prepared", "is preparing"],
+        correctAnswer: 4
+      },
+      {
+        question: "Each of the students in the advanced program, despite facing numerous challenges, _______ expected to complete a comprehensive research project. The faculty is impressed by their dedication.",
+        choices: ["is", "are", "be", "being", "been"],
+        correctAnswer: 0
+      }
+    ]
+  }
+],
+    'Vocabulary Building': [
+      // GREEN: INSERT 'Vocabulary Building' QUESTIONS HERE
+    ],
+    'Reading Comprehension': [
+      // GREEN: INSERT 'Reading Comprehension' QUESTIONS HERE
+    ],
+    'Literary Analysis': [
+      // GREEN: INSERT 'Literary Analysis' QUESTIONS HERE
+    ],
+    'Essay Writing': [
+      // GREEN: INSERT 'Essay Writing' QUESTIONS HERE
+    ],
+    'Punctuation Rules': [
+      // GREEN: INSERT 'Punctuation Rules' QUESTIONS HERE
+    ],
+    'Figurative Language': [
+      // GREEN: INSERT 'Figurative Language' QUESTIONS HERE
+    ],
+    'Sentence Structure': [
+      // GREEN: INSERT 'Sentence Structure' QUESTIONS HERE
+    ],
+    'Parts of Speech': [
+      // GREEN: INSERT 'Parts of Speech' QUESTIONS HERE
+    ],
+    'Rhetorical Devices': [
+      // GREEN: INSERT 'Rhetorical Devices' QUESTIONS HERE
+    ],
+    'Writing Styles': [
+      // GREEN: INSERT 'Writing Styles' QUESTIONS HERE
+    ],
+    'English Literature Periods': [
+      // GREEN: INSERT 'English Literature Periods' QUESTIONS HERE
+    ],
+    'Poetry Analysis': [
+      // GREEN: INSERT 'Poetry Analysis' QUESTIONS HERE
+    ],
+    'Argument and Persuasion': [
+      // GREEN: INSERT 'Argument and Persuasion' QUESTIONS HERE
+    ],
+    'Research Writing': [
+      // GREEN: INSERT 'Research Writing' QUESTIONS HERE
+    ],
+    'Critical Thinking': [
+      // GREEN: INSERT 'Critical Thinking' QUESTIONS HERE
+    ],
+    'Editing and Proofreading': [
+      // GREEN: INSERT 'Editing and Proofreading' QUESTIONS HERE
+    ],
+    'Public Speaking': [
+      // GREEN: INSERT 'Public Speaking' QUESTIONS HERE
+    ],
+    'Creative Writing': [
+      // GREEN: INSERT 'Creative Writing' QUESTIONS HERE
+    ],
+    'English Language History': [
+      // GREEN: INSERT 'English Language History' QUESTIONS HERE
     ]
   }
 };
